@@ -1,8 +1,6 @@
-<h1>Top 100 Movies</h1>
-<ol>
-    <% @movies.each do |m|%>
-        <li>
-            <%= link_to m.title, m %> was produced by <%= link_to m.production_company.name, m.production_company.name %>
-        </li>
-    <% end %>
-</ol>   
+
+<h2 class="title is-2">Top 100 Movies</h2>
+
+<%= render @movies %>
+
+<%= render partial: 'layouts/components/footer' %>
